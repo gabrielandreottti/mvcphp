@@ -19,6 +19,4 @@ class JogosModel
     }
     public function Deletarjogos(): void {
     //codigo de deletar 
-    }
-}
-
+    
