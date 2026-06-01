@@ -1,22 +1,23 @@
 <?php
-class JogosModel 
+class JogoModel 
 {
         private $conexao;
  public function __construct($conexao) {
     $this-> $conexao = $conexao;
     }
-    public function ListarJogos(): void {
+    public function ListarJogo(): void {
     //codigo de listar 
     }
-    public function Buscarjogos(): void {
+    public function Buscarjogo(): void {
     //codigo de busca
     }
-    public function Adicionarjogos(): void {
+    public function Adicionarjogo(): void {
     //codigo de inserçao
     }
-    public function Atualizarjogos(): void {
+    public function Atualizarjogo(): void {
     //codigo de atualizaçao
     }
-    public function Deletarjogos(): void {
-    //codigo de deletar 
-    
+    public function Deletarjogo(): void {
+    //codigo de deletar
+    }
+}
