@@ -1,23 +1,36 @@
 <?php
-class JogoModel 
+
+class JogoModel
 {
-        private $conexao;
- public function __construct($conexao) {
-    $this-> $conexao = $conexao;
+    private $conexao;
+
+    public function __construct($conexao)
+    {
+        $this->conexao = $conexao;
     }
-    public function ListarJogo(): void {
-    //codigo de listar 
+
+    public function listarJogo()
+    {
+        // código para listar
     }
-    public function Buscarjogo(): void {
-    //codigo de busca
+
+    public function buscarJogo($id)
+    {
+        // código para buscar por id
     }
-    public function Adicionarjogo(): void {
-    //codigo de inserçao
+
+    public function adicionarJogo($nome, $ano, $hetariedade, $genero, $estudio)
+    {
+        // código para inserir
     }
-    public function Atualizarjogo(): void {
-    //codigo de atualizaçao
+
+    public function atualizarJogo($id, $nome, $ano, $hetariedade, $genero, $estudio)
+    {
+        // código para atualizar
     }
-    public function Deletarjogo(): void {
-    //codigo de deletar
+
+    public function deletarJogo($id)
+    {
+        // código para deletar
     }
 }

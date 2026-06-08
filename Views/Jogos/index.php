@@ -7,10 +7,12 @@
         <th>Hetariedade</th>
         <th>Gênero</th>
         <th>Estudio</th>
+        <th>Id</th>
     </tr>
 
     <?php while($linha = $filmes->fetch_assoc()): ?>
         <tr>
+            <td><?= htmlspecialchars($linha['id']) ?></td>
             <td><?= htmlspecialchars($linha['nome']) ?></td>
             <td><?= htmlspecialchars($linha['ano']) ?></td>
             <td><?= htmlspecialchars($linha['hereditariedade']) ?></td>
@@ -26,4 +28,4 @@
 
 </table>
 
-<a href="?action=adicionar">Cadastro</a>
+<a href="?action=adicionar">Cadastro</a>git commit -m "first commit"

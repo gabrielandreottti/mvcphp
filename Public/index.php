@@ -1,9 +1,9 @@
 <?php
 include '../config/conexao.php';
 include '../controllers/JogoController.php';
-include '../views/layouts/header.php';
+//include '../views/layouts/header.php';
 
-$controller = new jogoController($conexao);
+$controller = new JogoController($conexao);
  
 // Roteamento básico
 if (isset($_GET['action'])) {
@@ -14,33 +14,33 @@ if (isset($_GET['action'])) {
     switch ($action) {
 
         case 'adicionar':
-            include '../views/Jogos/add-form.php';
+            include '../views/Jogo/add-form.php';
             break;
 
         case 'editar':
             if ($id) {
                 $jogo = $controller->buscar($id);
-                include '../views/Jogos/edit-form.php';
+                include '../views/Jogo/edit-form.php';
             }
             break;
 
         case 'deletar':
             if ($id) {
                 $controller->deletar($id);
-                header("Location: public/index.php?mensagem=Jogo deletado com sucesso");
+                header("Location: index.php?mensagem=Jogo deletado com sucesso");
                 exit();
             }
             break;
 
         default:
-            $jogo = $controller->listar();
+          $jogos = $controller->listar();
             include '../views/Jogo/index.php';
             break;
     }
 
 } else {
 
-    $jogo = $controller->listar();
+   $jogos = $controller->listar();
     include '../views/Jogo/index.php';
 }
 include '../views/layouts/footer.php';

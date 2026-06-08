@@ -1,29 +1,26 @@
 <?php
-class jogoController {
-    private $jogoModel; 
+include_once '../models/JogoModel.php';
+class JogoController {
+    private $JogoModel; 
 
     public function __construct($conexao) {
-        $this->jogoModel = new JogoModel($conexao);
+        $this->JogoModel = new JogoModel($conexao);
     }
 
     public function listar() {
-        return $this->jogoModel->listarJogo();
-    }
-
-    public function adicionar($nome, $ano, $hetariedade, $genero, $estudio) {
-        return $this->jogoModel->adicionarJogo($nome, $ano, $hetariedade, $genero, $estudio);
+        return $this->JogoModel->ListarJogo();
     }
 
     public function editar($id, $nome, $ano , $hetariedade, $genero, $estudio) {
-        return $this->jogoModel->atualizarJogo($id, $nome, $ano, $hetariedade, $genero, $estudio);
+        return $this->JogoModel->AtualizarJogo($id, $nome, $ano, $hetariedade, $genero, $estudio);
     }
 
     public function deletar($id) {
-        return $this->jogoModel->deletarJogo($id);
+        return $this->JogoModel->DeletarJogo($id);
     }
 
     public function buscar($id) {
-        return $this->jogoModel->buscarJogo($id);
+        return $this->JogoModel->BuscarJogo($id);
     }
 }
 // exemplo de como ficaria
